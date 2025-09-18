@@ -24,17 +24,23 @@ def draw_pumpkin(t, x, y, radius):
     t.begin_fill()
     t.circle(radius)
     t.end_fill()
+
     #stem
+    base = radius // 5
+    side = radius // 2
+    t.penup()
+    t.goto(x + base //2, y + 2*0.99*radius)
+    t.pendown()
     t.fillcolor("green")
     t.begin_fill()
     t.left(90)
-    t.forward(radius // 2)
+    t.forward(side)
     t.left(90)
-    t.forward(radius //5)
+    t.forward(base)
     t.left(90)
-    t.forward(radius // 2)
+    t.forward(side)
     t.left(90)
-    t.forward(radius // 5)
+    t.forward(base)
     t.end_fill()
 
 def draw_eye(t, x, y, size):
@@ -59,6 +65,7 @@ def draw_mouth(t, x, y, width):
         t.forward(width // 5)
         t.right(120)
     t.end_fill()
+    t.left(60)
 
 def draw_star(t, x, y, size):
     t.penup()
@@ -87,7 +94,7 @@ def draw_jackolantern(t, x, y, r):
 
 t = turtle.Turtle()
 t.shape("turtle")
-t.speed(10)
+t.speed(0)
 t.hideturtle()
 
 screen = turtle.Screen()
@@ -103,19 +110,17 @@ t.clear()
 #draw_circle(t, 50)
 #draw_polygon(t, 5, 75)
 x = -200
-y = -200
+y = -250
 r = 100
-
-
 
 #draw_pumpkin(t, x, y, r)
 #draw_eye(t, x - r//2- s //2, y + (2 + r) - 1.75, s)
 #draw_eye(t, x + r//2 - s, y + ( 2 + r) - 1.75, s)
 #draw_mouth(t, x - r//3.5 - s, y + (2 + r) - 50, 100)
 draw_jackolantern(t, x, y, r)
-t.left(60)
-draw_jackolantern(t, x + 400, y, 200)
+draw_jackolantern(t, x + 400, y, 50)
+draw_jackolantern(t, x + 225, y, 75)
 draw_star(t, -100, 150, 30)
 draw_star(t, 100, 100, 20)
-draw_sky(t, 20)
+draw_sky(t, 50)
 turtle.exitonclick()

@@ -213,6 +213,7 @@ draw_sky(t, 30)
 ## Part 5: Reflection
 * In a new **README.md**, reflect on how encapsulation and generalization helped us break down the drawing process for this scene.
 
+ Generalizaiton and encapsulation helped me in this lab by making it easier to understand the code and it also helped me shorten the amount of code I was using with encapsulation. Making variables for long repetitive code instead of rewriting everything.
 ## Part 6: Turn In!
 [Review video of this process](https://redwoods.us-west-2.instructuremedia.com/embed/72299bfd-8420-4ad0-8af5-18fb8e32e50a)
 1. **Create a GitHub Repository:**
